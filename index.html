@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 1</title>
+</head>
+<body>
+    <h2>Registration Form</h2><!--creates a header for the form-->
+    <form id="Form"><!--<form> tag wraps the form elements and "id"gives this form an identifier, allowing it to be easily accessed in JavaScript-->
+      <div class="form-group"><!--assigns a CSS class to the div, which can be used to apply styles in css-->
+        <label for="firstName">First Name:</label><!--the label focuses the input field since for="firstName" connects this label to the input element with id="firstName."-->
+        <input type="text" id="firstName" required><!--<input type="text"> creates a single-line text input field. id="firstName" identifies this input element, allowing to select in JavaScript or CSS.-->
+        <span class="error" id="firstNameError"></span><!--<span> is an inline element often used for small blocks of text. class="error" applies a CSS class named "error" to style-->
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><!--required makes the field mandatory, so the form won’t submit unless this field has a value-->
+        <span class="error" id="lastNameError"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Address:</label><!--The label is connected to the <textarea> with id="address" using for="address" attribute. The textarea field will be focused when you click on "Address:".-->
+        <textarea id="address" name="address" rows="4" required></textarea><!--<textarea> creates a multi-line input field.
+          id="address" uniquely identifies the textarea, allowing it to be accessed or styled individually.rows="4" sets the initial visible height of the textarea to 4 lines-->
+        <span class="error" id="addressError"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+        <span class="error" id="dobError"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" readonly><!--readonly prevents users from typing into this field, making it display-only. This is useful for showing calculated values that the user should not change directly.-->
+      </div>
+  
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" required><!--<select> creates a dropdown list..-->
+        <div class="form-inline">
+          <option value="">Select</option><!--The <option> elements represent the dropdown options. The first option has an empty value="", which acts as a placeholder ("Select")-->
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <span class="error" id="genderError"></span>
+    </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country" name="country"></select>
+        <span class="error" id="countryError"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="number">Phone Number:</label>
+        <input type="text" id="number" required maxlength="11"><!--The maxlength attribute limits the input to 11 characters, so the user can't type more than that.-->
+        <span class="error" id="numberError"></span>
+      </div>
+  
+      <div class="form-group">
+        <label>Are you physically challenged?</label><!--Wrapping each radio button with a <label> tag makes it easier to click on the labels directly to select options.-->
+        <div class="form-inline"><!--"form-inline" class can be customized for inline styling if both radio buttons on the same line.-->
+        <input type="radio" name="physicallyChallenged" value="Yes" id="physicallyYes"> Yes <!--to add JavaScript validation for this field, make sure to check if either physicallyYes or physicallyNo is selected, and display an error message in the physicallyError span if neither option is selected.-->
+        <input type="radio" name="physicallyChallenged" value="No" id="physicallyNo"> No
+        <span class="error" id="physicallyError"></span>
+    </div>
+      </div>
+  
+      <div class="form-group" id="justificationGroup" style="display: none;">
+        <label for="justification">Justify:</label>
+        <textarea id="justification" name="justification" rows="3"></textarea>
+        <span class="error" id="justificationError"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="hobbies">Hobbies:</label>
+                <input type="checkbox" id="hobby1" name="hobbies" value="Reading">
+                <label for="hobby1">Reading</label><br>
+            
+                <input type="checkbox" id="hobby2" name="hobbies" value="Writing">
+                <label for="hobby2">Writing</label><br>
+            
+                <input type="checkbox" id="hobby3" name="hobbies" value="Coding">
+                <label for="hobby3">Coding</label><br>
+            
+                <input type="checkbox" id="hobby4" name="hobbies" value="Travelling">
+                <label for="hobby4">Travelling</label><br>
+        <span class="error" id="hobbiesError"></span>
+      </div>
+    </div>
+  
+    <div class="form-group">
+        <input type="submit" value="Submit"/>
+    </div>
+    
+    <button type="submit" id="saveButton">Save</button>
+    <button type="button" id="updateButton" style="display:none;" onclick="updateUser()">Update</button>
+    </form>
+  
+    <div class="table-container">
+      <h3>People Info</h3>
+      <table id="userTable">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>DOB</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+  </html>

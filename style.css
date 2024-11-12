@@ -1,0 +1,122 @@
+.form-group { 
+    margin-bottom: 10px; 
+}
+body{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: -webkit-radial-gradient(top left, #90F6FB, #2c3283);
+}
+h3{
+    text-align: center;
+}
+.form{
+    width: 100%;
+}
+h2{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #efbe58;
+}
+form{
+   max-width: 400px;
+    padding: 20px 40px 40px;
+    border: 1px solid #78d0f1;
+    border-radius: 5px;
+    background-color: #78d0f1;
+    margin: 4% auto;
+}
+label{
+    display: block;
+    margin-bottom: 6px;
+}
+label{
+    color: #1d1b1b;
+    font-size: 130%;
+}
+input,select{
+    border: 2px solid #bde9e9;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.form-group{
+    padding-bottom: 18px;
+}
+.form-inline{
+    border: 2px solid #90F6FB;
+    padding: 6px 60px 7px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.form-inline label,.form-inline input{
+    display: inline-block;
+    width: auto;
+    padding-right: 25px;
+}
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+input[type=checkbox] { 
+    vertical-align: middle; 
+    position: relative; 
+    top: 29px; 
+    height: 20px
+    
+} 
+button{
+    font-size: 110%;
+    font-weight: 200;
+    background-color: #bef5fd;
+    color: #1c1a1a;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    height: 40px;;
+}
+.error{
+    color: red;
+    font-size: 120%;
+   
+}
+input, select{
+    padding: 8px;
+    margin: 5px 0;
+}
+
+input[type="text"]{
+    outline: none;
+}
+input[type="submit"]{
+    font-size: 110%;
+    font-weight: 200;
+    background-color: #bef5fd;
+    box-shadow: 0 3px 0 #76dcde;
+    color: #1c1a1a;
+    margin-top: 10px;
+    cursor: pointer;
+    border-color: #1c1a1a;
+}
+
+
+.table-container { 
+    margin-top: 20px; 
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+table, th, td {
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: center; 
+}
+th { 
+    background-color: #f2f2f2; 
+}
